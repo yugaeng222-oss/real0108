@@ -1,74 +1,119 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fullpage js</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/jquery.fullpage.min.css">
-    <style>
-        header {width: 100%; height: 60px; position: fixed; left: 0; top: 0; z-index: 7;}
-        .container {max-width: 1500px; margin: 0 auto; display: flex; justify-content: space-between;}
-        header h1 {width: 200px; height: 60px; background: #000;}
-        header .gnb {display: flex; justify-content: end;}
-        header .gnb li {}
-        header .gnb li a {display: block; padding: 20px 40px;}
-
-        #fullpage {}
-        #fullpage .section {width: 100%; height: 100vh; background: lavender;}
-        #fullpage .section:nth-child(2n) {background: lavenderblush;}
-        #fullpage .footer .section {height: 250px !important;background: #000;}
-    </style>
+  <meta charset="UTF-8" />
+  <title>HYUNDAI</title>
+  <link rel="stylesheet" href="/css/font.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1><a href="#">로고</a></h1>
-            
+
+<!-- HEADER -->
+<header class="header">
+    <img src="images/hero.png" alt="">
+  
+        <nav>
             <ul class="gnb">
-                <li>
-                    <a href="#sec1">SECTION1</a>
-                </li>
-                <li>
-                    <a href="#sec2">SECTION2</a>
-                </li>
-                <li>
-                    <a href="#sec3">SECTION3</a>
-                </li>
-                <li>
-                    <a href="#sec4">SECTION4</a>
-                </li>
+            <li><a href="#">MODEL</a></li>
+            <li><a href="#">PURCHASE</a></li>
+            <li><a href="#">SERVICE</a></li>
+            <li><a href="#">BRAND</a></li>
             </ul>
-        </div>
-    </header>
-
-    <div id="fullpage">
-        <section class="section"></section>
-        <section class="section"></section>
-        <section class="section"></section>
-        <section class="section"></section>
-        <footer class="section"></footer>
-    </div>
-
-    <script src="script/jquery-3.7.1.min.js"></script>
-    <script src="script/jquery.fullpage.min.js"></script>
+            <div class="logo"><img src="images/hylogo.png" alt=""></div>
+            <div class="menu-btn">☰</div>
+        </nav>
+  
+ 
 
 
-    <script>
-        $('#fullpage').fullpage({
-            anchors:['sec1','sec2','sec3','sec4'],
-             
-            navigation:true,
-            navigationPosition:'left',
+<main>
 
-            afterLoad:function(a,b,c,d){
-                $('.gnb li a').css({color:'#000'})
-                $('.gnb li').eq(b-1).find('a').css({color:'red'})
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <p>Advanced Air Mobility</p>
+    <h1>HYUNDAI</h1>
+  </div>
+</section>
+</header>
+<!-- BEST MODEL -->
+<section class="best-model">
+  <h2>BEST MODEL</h2>
 
-            }
-        })
-    </script>
-    <!-- anchors는 링크 걸 때 필요, [] 대괄호는 순서 표시할 때 씀 
-     -->
+  <div class="model-list">
+    <article class="model-card">
+      <img src="sonata.png" alt="">
+      <h3>SONATA The Edge</h3>
+      <p class="price">28,260,000원</p>
+      <div class="btns">
+        <button>자세히 보기</button>
+        <button class="dark">견적 내기</button>
+      </div>
+    </article>
+
+    <article class="model-card">
+      <img src="santafe.png" alt="">
+      <h3>SANTA FE</h3>
+      <p class="price">28,260,000원</p>
+      <div class="btns">
+        <button>자세히 보기</button>
+        <button class="dark">견적 내기</button>
+      </div>
+    </article>
+
+    <article class="model-card">
+      <img src="grandeur.png" alt="">
+      <h3>GRANDEUR</h3>
+      <p class="price">28,260,000원</p>
+      <div class="btns">
+        <button>자세히 보기</button>
+        <button class="dark">견적 내기</button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- HIGHLIGHT -->
+<section class="highlight">
+  <div class="highlight-text">
+    <h2>GRANDEUR</h2>
+    <p>Outclass GRANDEUR</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="gallery-main"></div>
+  <div class="gallery-thumbs">
+    <div></div><div></div><div></div><div></div>
+  </div>
+</section>
+
+<!-- BRAND STORY -->
+<section class="brand-story">
+  <h2>Brand Story</h2>
+  <div class="story-images">
+    <div></div><div></div><div></div>
+  </div>
+</section>
+
+<!-- EVENT -->
+<section class="event">
+  <h2>EVENT</h2>
+  <div class="event-list">
+    <article class="event-card"></article>
+    <article class="event-card"></article>
+    <article class="event-card"></article>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© HYUNDAI MOTOR COMPANY</p>
+</footer>
+
 </body>
 </html>
